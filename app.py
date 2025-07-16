@@ -1,4 +1,6 @@
-from calc_func import do_addition, do_subtraction, do_multiplication
+from calc_func import do_addition, do_subtraction, do_division
+from multiply import do_multiplication
+
 
 def main():
     print("Welcome to the Calculator App!")
@@ -8,8 +10,9 @@ def main():
     1. Add
     2. Subtract
     3. Multiply
+    4. Divide
     """
-    input_choice = input("Please enter your choice (1 or 2 or 3): ")
+    input_choice = input("Please enter your choice (1 or 2 or 3 or 4): ")
     a = int(input("Enter first number: "))
     b = int(input("Enter second number: "))
 
@@ -19,6 +22,8 @@ def main():
         result = do_subtraction(a, b)
     elif input_choice == '3':
         result = do_multiplication(a, b)
+    elif input_choice == '4':
+        result = do_division(a, b)
     else:
         print("Invalid choice")
         return
